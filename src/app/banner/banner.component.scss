@@ -1,0 +1,61 @@
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #353535;
+    position: relative;
+  }
+  
+  p.top {
+    position:absolute;
+    top: 0;
+  }
+  
+  .container {
+    margin:auto;
+    min-height: 700px;
+    width: 1100px;
+  }
+  
+  .box-2 {
+    width: 770px;
+    min-height: 390px;
+  }
+  
+  .box-3 {
+    width: 467px;
+    min-height: 178px;
+    overflow: hidden;
+  }
+
+
+  .box-3 p {
+    -moz-transform:translateX(100%);
+    -webkit-transform:translateX(100%);	
+    transform:translateX(100%);
+    /* Apply animation to this element */	
+    -moz-animation: box-3 15s linear infinite;
+    -webkit-animation: box-3 15s linear infinite;
+    animation: box-3 15s linear infinite;
+   }
+   /* Move it (define the animation) */
+  //  @-moz-keyframes box-3 {
+  //   0%   { -moz-transform: translateX(100%); }
+  //   100% { -moz-transform: translateX(-100%); }
+  //  }
+  //  @-webkit-keyframes box-3 {
+  //   0%   { -webkit-transform: translateX(100%); }
+  //   100% { -webkit-transform: translateX(-100%); }
+  //  }
+   @keyframes box-3 {
+    0%   { 
+    -moz-transform: translateX(100%); /* Firefox bug fix */
+    -webkit-transform: translateX(100%); /* Firefox bug fix */
+    transform: translateX(100%); 		
+    }
+    100% { 
+    -moz-transform: translateX(-100%); /* Firefox bug fix */
+    -webkit-transform: translateX(-100%); /* Firefox bug fix */
+    transform: translateX(-100%); 
+    }
+   }

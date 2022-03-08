@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="col-12" style="display: inline-flex;float: right;">
+
+        <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="grid">
+            <label ngbButtonLabel class="btn-primary">
+                <input ngbButton type="radio" [value]="true"> Grid
+            </label>
+            <label ngbButtonLabel class="btn-primary">
+                <input ngbButton type="radio" [value]="false"> List
+            </label>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Price Low to High
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" >1000 to 2000</a></li>
+                <li><a class="dropdown-item" >2000 to 5000</a></li>
+                <li><a class="dropdown-item" >5000 to 50000</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        <div *ngFor="let item of items" [ngClass]="grid ? 'col-3' : 'col-6'">
+            <div class="my-2" style="border: 1px solid;">{{''}}</div>
+        </div>
+    </div>
+
+</div>

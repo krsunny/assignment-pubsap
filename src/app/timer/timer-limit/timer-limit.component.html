@@ -1,0 +1,10 @@
+<div class="card" style="width: 40rem;height: auto;">
+    <div class="card-body" style="text-align: center;">
+      <h5 class="card-title">Enter Time Limit</h5>
+      <h6 class="card-subtitle mb-2 text-muted"><input type='text' [(ngModel)]="time" /></h6>
+      <a (click)="changeTimerState()" class="card-link">Start/pause</a>
+      <a (click)="reset()"  class="card-link">Reset</a>
+
+      <p *ngFor="let logItem of currentCounterLogs">{{ logItem }}</p>
+    </div>
+  </div>

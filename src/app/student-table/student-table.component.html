@@ -1,0 +1,30 @@
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col" sortable="name" (sort)="onSort($event)">Name</th>
+          <th scope="col" sortable="class" (sort)="onSort($event)">Class</th>
+          <th scope="col" sortable="section" (sort)="onSort($event)">Section</th>
+          <th scope="col" sortable="sub1" (sort)="onSort($event)">Sub1</th>
+          <th scope="col" sortable="sub2" (sort)="onSort($event)">Sub2</th>
+          <th scope="col" sortable="sub3" (sort)="onSort($event)">Sub3</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let student of students">
+          <td>
+            {{ student.name }}
+          </td>
+          <td>{{ student.class }}</td>
+          <td>{{ student.section }}</td>
+          <td>{{ student.sub1 }}</td>
+
+          <td>{{ student.sub2 }}</td>
+
+          <td>{{ student.sub3 }}</td>
+
+        </tr>
+        </tbody>
+      </table>
+</div>

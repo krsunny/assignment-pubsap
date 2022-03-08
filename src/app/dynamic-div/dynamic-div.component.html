@@ -1,0 +1,6 @@
+<div id="content">
+    <div class="contentInside"  *ngFor="let divData of dataSource; let i = index">
+      <button class="btn btn-primary" style="position: absolute;top:40%;left:30%"  (click)="onsubmit(i)">Button</button>
+    </div>
+  </div>
+  <button (click)="onAddData()">Add</button>

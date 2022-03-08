@@ -1,0 +1,12 @@
+<div class="container" >
+    <div class='col-12' style="display: flex;" >
+        <app-count-timer [item]="item" ></app-count-timer>&nbsp;
+        <app-timer-limit (updateItem)="updateItem($event)" (updatePauseCount)="updatePauseCount($event)" (updateStartCount)="updateStartCount($event)" (updateTime)="updateTime($event)"></app-timer-limit>
+    </div>
+    <hr>
+    <div class='col-12' style="display: flex;" >
+        <app-logs [time]="time"></app-logs>&nbsp;
+        <app-track [startcount]="startcount" [pausecount]="pausecount"></app-track>
+    </div>
+
+</div>
